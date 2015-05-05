@@ -1,0 +1,10 @@
+{% for deck in decks %}
+
+<h1>{{deck}}</h1>
+<ul>
+	{% for card in deck.cards.all %}
+	<li>{{ card.name }}</li>
+	{% endfor %}
+</ul>
+{{ deck.description }}
+{% endfor %}
