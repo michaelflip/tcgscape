@@ -54,6 +54,7 @@
 
 {% for deck in decks %}
 
+<div align = "center">
 <table class="table table-hover">
   <tr>
     <th>Deck name: {{deck}} </th>
@@ -63,11 +64,17 @@
     <td><b>Card: </b>{{ card.name }}</td>
     {% endfor %}
   </tr>
-  <tr>    <td>Description: {{ deck.description }}</td></tr>
-  <tr> <td> Author: {{ deck.author }}</td></tr>
+  <tr>    <td><b>Description:</b> {{ deck.description }}</td></tr>
+  <tr> <td> <b>Author:</b> {{ deck.author }}</td></tr>
 
 </table>
-
+</div>
 {% endfor %}
 
 
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
