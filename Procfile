@@ -1,1 +1,1 @@
-web: python manage.py runserver --noreload
+web: gunicorn hello:app --log-file -
