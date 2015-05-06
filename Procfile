@@ -1,1 +1,1 @@
-web: gunicorn tcgscape:app --log-file -
+web: gunicorn tcgscape.wsgi:application
