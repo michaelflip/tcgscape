@@ -1,1 +1,1 @@
-web: gunicorn tcgscape:app --log-file -
+web: gunicorn damp-tundra-8431:app --log-file -
