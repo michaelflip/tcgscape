@@ -17,3 +17,10 @@ def recentdecks(request):
 		"decks": Deck.objects.all(),
 	}
 	return render(request, "recentdecks.html", another_dict)
+
+def collection(request):
+	third_dict = {
+		"name": "MFlip",
+		"decks": Deck.objects.all(),
+	}
+	return render(request, "collection.html", third_dict)

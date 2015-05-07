@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', cards.views.home, name='home'),
     url(r'^recentdecks/', cards.views.recentdecks, name='recentdecks'),
+    url(r'^collection/', cards.views.collection, name='collection'),
 ]
