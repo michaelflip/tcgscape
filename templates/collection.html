@@ -78,25 +78,7 @@ $(document).ready(function(){
                     <h3>Do we have something you like? E-mail us! trades@tcgscape.com .</h3>
                     <a href="http://www.tcgscape.com" class="btn btn-lg btn-dark">Home</a>
                     <a class="btn btn-lg btn-dark">MTG</a>
-                    <h3>{% for deck in decks %}
-
-<div align = "center">
-<table class="table table-condensed">
-  <tr>
-    <th>Deck name: {{deck}}</th>
-  </tr>
-  <tr>
-    {% for card in deck.cards.all %}
-    <td><b>Card: </b>{{ card.name }}</td>
-    {% endfor %}
-  </tr>
-  <tr>    <td><b>Description:</b> {{ deck.description }}</td></tr>
-  <tr> <td><b>Author:</b> {{ deck.author }}</td></tr>
-
-</table>
-</div>
-{% endfor %}
-</h3>
+                    
                 </div>
             </div>
         </div>
