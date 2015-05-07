@@ -28,6 +28,15 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide();
+    });
+});
+</script>
+
 </head>
 
 <body>
@@ -161,14 +170,7 @@
         </div>
     </aside>
 
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $("p").hide();
-    });
-});
-</script>
+
 
     <!-- Call to Action -->
     <aside class="call-to-action bg-primary">
@@ -179,23 +181,25 @@ $(document).ready(function(){
                     <button><a class="btn btn-lg btn-light">DBZ CCG</a></button>
                     <a class="btn btn-lg btn-dark">MTG</a>
                     <h3>{% for deck in decks %}
+<body><p>
 
 <div align = "center">
 <table class="table table-hover">
   <tr>
-    <th><p>Deck name: {{deck}}</p> </th>
+    <th>Deck name: {{deck}}</th>
   </tr>
   <tr>
     {% for card in deck.cards.all %}
-    <td><b><p> Card: </b>{{ card.name }}</p></td>
+    <td><b>Card: </b>{{ card.name }}</td>
     {% endfor %}
   </tr>
-  <tr>    <td><b><p> Description:</b> {{ deck.description }}</p></td></tr>
-  <tr> <td><b><p> Author:</b> {{ deck.author }}</p></td></tr>
+  <tr>    <td><b>Description:</b> {{ deck.description }}</td></tr>
+  <tr> <td><b>Author:</b> {{ deck.author }}</td></tr>
 
 </table>
 </div>
 {% endfor %}
+</p></body>
 </h3>
                 </div>
             </div>
