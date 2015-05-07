@@ -75,14 +75,7 @@ $(document).ready(function(){
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Recent Deck Lists</h2>
-                    <hr class="small">
-                            </span>
-                            </div>
-                        </div>
-
-
-                                <h4>
+                    <h2>Recent Deck Lists</h2><h4>{% for deck in decks %}
 <table class="table table-condensed">
   <tr>
     <th>Deck name: {{deck}}</th>
@@ -95,7 +88,14 @@ $(document).ready(function(){
   <tr>    <td><b>Description:</b> {{ deck.description }}</td></tr>
   <tr> <td><b>Author:</b> {{ deck.author }}</td></tr>
 
-</table>
+</table></h4>
+                    <hr class="small">
+                            </span>
+                            </div>
+                        </div>
+
+
+                                
                             </div>
                         </div>
                     </div>
