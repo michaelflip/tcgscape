@@ -89,12 +89,12 @@ $(document).ready(function(){
   </tr>
   <tr>    <td><b>Description:</b> {{ deck.description }}</td></tr>
   <tr> <td><b>Author:</b> {{ deck.author }}</td></tr>
- <b>Cards: </b>   {% for card in deck.cards.all %}
-{{ card.name }}<br>
-    {% endfor %}
 </table>
 </div>
 {% endfor %}
+<b>Cards: </b>    {% for card in deck.cards.all %}
+{{ card.name }}<br>
+    {% endfor %}
 </h3>
                 </div>
             </div>
