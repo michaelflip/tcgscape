@@ -10,3 +10,10 @@ def home(request):
 		"decks": Deck.objects.all(),
 	}
 	return render(request, "home.html", my_dict)
+
+	def recentdecks(request):
+	another_dict = {
+		"name": "Michael",
+		"decks": Deck.objects.all(),
+	}
+	return render(request, "recentdecks.html", another_dict)
