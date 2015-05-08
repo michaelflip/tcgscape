@@ -123,15 +123,7 @@ $(document).ready(function(){
                             </tr>
                             <tr>
                                 <td>
-
-
-
-
-
-                                </td>
-                            </tr>
-                        </table>
-                         
+                                 
                                     {% for deckcard in deck.deckcard_set.all %}
                                 <ul>
                                     <li>{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
@@ -143,6 +135,10 @@ $(document).ready(function(){
                                         
 
                                     {% endfor %}
+                                </td>
+                            </tr>
+                        </table>
+
                     </div>
 
 
