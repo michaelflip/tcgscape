@@ -29,6 +29,19 @@
     <![endif]-->
 
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+   <script type='text/javascript'>
+$(document).ready(function(){
+    $(".button").hover(function() {
+        $(this).attr("src"," {{ deckcard.card.name }} ");
+            }, function() {
+        $(this).attr("src","/static/sets/set1/cards/{{ deckcard.card.image_url }}");
+    });
+});
+</script>
+
+
 <script>
 $(document).ready(function(){
     $("button").click(function(){
