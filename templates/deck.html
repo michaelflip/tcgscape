@@ -229,10 +229,10 @@ $( "li" ).hover(
   function() {
                 {% for deckcard in deck.deckcard_set.all %}
 
-    $( this ).append( $( <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}" height="35%" width="10%"> ) );
+    $( this ).append( $( "Test: <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}" height="35%" width="10%">" ) );
 
     {% endfor %}
-    
+
   }, function() {
     $( this ).find( "span:last" ).remove();
   }
