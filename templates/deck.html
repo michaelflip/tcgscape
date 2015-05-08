@@ -221,16 +221,11 @@ $(document).ready(function(){
     <script>
 $( "td" ).hover(
   function() {
-    $( this ).append( $( <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}"> ) );
+    $( this ).addClass( "hover" );
   }, function() {
-    $( this ).find( "span:last" ).remove();
+    $( this ).removeClass( "hover" );
   }
 );
- 
-$( "li.fade" ).hover(function() {
-  $( this ).fadeOut( 100 );
-  $( this ).fadeIn( 500 );
-});
 </script>
 
 
