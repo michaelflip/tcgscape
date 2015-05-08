@@ -233,6 +233,7 @@ $( "li" )
   .filter( ":even" )
     .hover(function() {
       $( this )
+        .attr("src","/static/sets/set1/cards/{{ deckcard.card.image_url }}")
         .toggleClass( "active" )
         .next()
           .stop( true, true )
