@@ -125,7 +125,7 @@ $(document).ready(function(){
                                 <td>   
                                     {% for deckcard in deck.deckcard_set.all %}
                                         {{ deckcard.card.name }} - {{ deckcard.quantity }}<br>
-                                        <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}" height="35%" width="10%">
+                                        <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}" height="35%" width="20%">
                                     {% endfor %}
                                 </td>
                             </tr>
