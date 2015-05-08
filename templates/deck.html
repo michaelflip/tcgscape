@@ -125,19 +125,19 @@ $(document).ready(function(){
                                 <td>
  
                                     {% for deckcard in deck.deckcard_set.all %}
-                                        {{ deckcard.card.name }} - {{ deckcard.quantity }}<br>
+                                <ul>
+                                    <li>{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
+                                </ul>
+
+
+
 
                                         
 
                                     {% endfor %}
 
 
-<ul>
-  <li>Milk</li>
-  <li>Bread</li>
-  <li class="fade">Chips</li>
-  <li class="fade">Socks</li>
-</ul>
+
 
                                 </td>
                             </tr>
@@ -230,16 +230,12 @@ $(document).ready(function(){
 <script>
 $( "li" ).hover(
   function() {
-    $( this ).append( $( "<span> ***</span>" ) );
+    $( this ).append( $( <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}" height="35%" width="10%">
+                                    ) );
   }, function() {
     $( this ).find( "span:last" ).remove();
   }
 );
- 
-$( "li.fade" ).hover(function() {
-  $( this ).fadeOut( 100 );
-  $( this ).fadeIn( 500 );
-});
 </script>
 
 
