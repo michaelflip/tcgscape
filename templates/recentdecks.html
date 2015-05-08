@@ -68,9 +68,15 @@ $(document).ready(function(){
             <li class="sidebar-brand">
                 <a href="http://www.tcgscape.com"  onclick = $("#menu-close").click(); >TCGScape</a>
             </li>
+
+            {% for d in decks %}
+
             <li>
-                <a href="http://www.tcgscape.com" onclick = $("#menu-close").click(); >Home</a>
+                <a href="/deck/{{ d.name }}" onclick = $("#menu-close").click(); >{{ d.name }}</a>
             </li>
+
+            {% endfor %}
+
             <li>
                 <a href="#about" onclick = $("#menu-close").click(); >About</a>
             </li>
@@ -86,13 +92,12 @@ $(document).ready(function(){
         </ul>
     </nav>
 
-
     <!-- Call to Action -->
     <aside class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>Take a look at some of our builds.</h3>
+                    <h3>Here are some of our more recent builds.</h3>
                     <a class="btn btn-lg btn-dark">DBZ CCG</a>
                     <a class="btn btn-lg btn-dark">MTG</a>
                     <h3>

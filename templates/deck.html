@@ -69,10 +69,6 @@ $(document).ready(function(){
                 <a href="http://www.tcgscape.com"  onclick = $("#menu-close").click(); >TCGScape</a>
             </li>
 
-
-
-
-
             {% for d in decks %}
 
             <li>
@@ -80,12 +76,6 @@ $(document).ready(function(){
             </li>
 
             {% endfor %}
-
-
-
-
-
-
 
             <li>
                 <a href="#about" onclick = $("#menu-close").click(); >About</a>
@@ -135,7 +125,7 @@ $(document).ready(function(){
                                 <td>   
                                     {% for deckcard in deck.deckcard_set.all %}
                                         {{ deckcard.card.name }} - {{ deckcard.quantity }}<br>
-                                        <img src="/static/sets/set1/cards/{{ deckcard.card.description }}">
+                                        <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}">
                                     {% endfor %}
                                 </td>
                             </tr>
