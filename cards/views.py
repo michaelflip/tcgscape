@@ -15,6 +15,7 @@ def recentdecks(request):
 	another_dict = {
 		"name": "Flip",
 		"decks": Deck.objects.all(),
+
 	}
 	return render(request, "recentdecks.html", another_dict)
 
@@ -24,3 +25,10 @@ def collection(request):
 		"decks": Deck.objects.all(),
 	}
 	return render(request, "collection.html", third_dict)
+
+def deck(request, deck_name):
+	my_dict = {
+		"deck": Deck.objects.get(name=deck_name),
+		"decks": Deck.objects.all(),
+	}
+	return render(request, "deck.html", my_dict)
