@@ -105,7 +105,7 @@ $(document).ready(function(){
 
 
 
-                    <div align = "center">
+                    <div id="img_container" align = "center">
                         <table class="table table-condensed">
                             <tr>
                                 <th>Deck name: {{deck}}</th>
@@ -224,7 +224,20 @@ $(document).ready(function(){
     </script>
 
 
-
+<script>
+$( "li" ).hover(
+  function() {
+    $( this ).append( $( "Test blah blah <span> ***</span>" ) );
+  }, function() {
+    $( this ).find( "span:last" ).remove();
+  }
+);
+ 
+$( "li.fade" ).hover(function() {
+  $( this ).fadeOut( 100 );
+  $( this ).fadeIn( 500 );
+});
+</script>
 
 
 </body>
