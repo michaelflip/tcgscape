@@ -229,7 +229,7 @@ $( "li.hover" ).hover(
   function() {
     $( this ).append( $( <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}"> ) );
   }, function() {
-    $( this ).find( "span:last" ).remove();
+    $( this ).find( "img src:last" ).remove();
   }
 );
  
