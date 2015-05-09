@@ -127,7 +127,7 @@ $(document).ready(function(){
                                     {% for deckcard in deck.deckcard_set.all %}
                                 <ul>
 
-                                    <li>{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
+                                    <li class="hover">{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
 
                                 </ul>
 
@@ -225,7 +225,7 @@ $(document).ready(function(){
 
 
 <script>
-$( "li" ).hover(
+$( "li.hover" ).hover(
   function() {
     $( this ).append( $( "<span> ***</span>" ) );
   }, function() {
