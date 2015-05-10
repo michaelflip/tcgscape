@@ -124,8 +124,9 @@ $(document).ready(function(){
                             <tr>
                                 <td>
 
+                                    {% for deckcard in deck.deckcard_set.all %}
+                                <ul>
 
-{% for deckcard in deck.deckcard_set.all %}
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
@@ -138,18 +139,22 @@ $(document).ready(function(){
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-        <img src="/static/sets/{{ deckcard.card.card_set_name }}/Cards/{{ deckcard.card.image_url }}">
-        
+        <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}">
+        Some placeholder text
       </div>
     </div>
   </div>
 
-{% endfor %}
+                                    <li class="hover">{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
+
+                                </ul>
 
 
-     
 
 
+                                        
+
+                                    {% endfor %}
                                 </td>
                             </tr>
                         </table>
@@ -162,6 +167,7 @@ $(document).ready(function(){
                 </div>
                 </div>
 </aside>
+
 
 
 
