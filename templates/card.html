@@ -108,22 +108,24 @@ $(document).ready(function(){
                     <div id="img_container" align = "center">
                         <table class="table table-condensed">
                             <tr>
-                                <th>Deck name: {{deck}}</th>
+                                {% for deckcard in deck.deckcard_set.all %}
+                                <th>Card name: {{card.name}}</th>
+                                }
                             </tr>
                             <tr>
                             </tr>
                             <tr>
-                                <td><b>Description:</b> {{ deck.description }}</td>
+                                <td><b>Description:</b> {{ card.description }}</td>
                             </tr>
                             <tr> 
-                                <td><b>Author:</b> {{ deck.author }}</td>
+                                <td><b>Card Type:</b> {{ card.card_type }}</td>
                             </tr>
                             <tr>
-                                <td><b>Cards: </b> </td>
+                                <td><b>Card Number: </b> {{ card.card_number }} </td>
                             </tr>
                             <tr>
                                 <td>
-
+                                    {% endfor %}
                                     {% for deckcard in deck.deckcard_set.all %}
                                 <ul>
                                     <li class="hover">{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
