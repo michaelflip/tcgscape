@@ -223,7 +223,7 @@ $(document).ready(function(){
 <script>
 $( "li.hover" ).hover(
   function() {
-    $( this ).append( $( "<span> Card Type: {% for deckcard in deck.deckcard_set.all %} {{ deckcard.card.card_type }}[0] {% endfor %} </span>" ) );
+    $( this ).append( $( "<span> Card Type: {% for deckcard in deck.deckcard_set.all %} {{ deckcard.card.card_type }} {% endfor %}<br>Description: {% for deckcard in deck.deckcard_set.all %} {{ deckcard.card.description }} {% endfor %}<br>Card Number: {% for deckcard in deck.deckcard_set.all %} {{ deckcard.card.card_number }} {% endfor %} </span>" ) );
   }, function() {
     $( this ).find( "span:last" ).remove();
   }
