@@ -107,24 +107,20 @@ $(document).ready(function(){
                     <div align = "center">
                         <table class="table table-condensed">
                             <tr>
-                                <th>Deck name: {{deck}}</th>
+                                <th>                                <ul>
+                                    <li class="hover"><a href="/card/{{ deck.name }}"><font color="white"> {{ deck.name }} </a></font><br></li>
+                                </ul>   </th>
                             </tr>
                             <tr>
                             </tr>
                             <tr>
-                                <td><b>Description:</b> {{ deck.description }}</td>
                             </tr>
                             <tr> 
-                                <td><b>Author:</b> {{ deck.author }}</td>
                             </tr>
                             <tr>
-                                <td><b>Cards: </b> </td>
                             </tr>
                             <tr>
                                 <td>   
-                                    {% for card in deck.cards.all %}
-                                        {{ card.name }}<br>
-                                    {% endfor %}
                                 </td>
                             </tr>
                         </table>
