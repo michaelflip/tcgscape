@@ -129,13 +129,10 @@ $(document).ready(function(){
 
                                     <li class="hover">{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
 
-                                </ul>
+                                </ul>   
 
-<img src="../static/sets/set1/cards/{{ deckcard.card.image_url }}">
+                                    <img src="/static/sets/{{ deckcard.card.card_set_name }}/cards/{{ deckcard.card.image_url }}">
 
-
-
-                                        
 
                                     {% endfor %}
                                 </td>
