@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^recentdecks/', cards.views.recentdecks, name='recentdecks'),
     url(r'^collection/', cards.views.collection, name='collection'),
     url(r'^deck/(?P<deck_name>.*)$', cards.views.deck, name='deck'),
+    url(r'^card/(?P<card_name>.*)$', cards.views.card, name='card'),
 ]

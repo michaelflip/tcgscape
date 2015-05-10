@@ -32,3 +32,10 @@ def deck(request, deck_name):
 		"decks": Deck.objects.all(),
 	}
 	return render(request, "deck.html", my_dict)
+
+def card(request, deck_name):
+	my_dict = {
+		"card": Card.objects.get(name=card_name),
+		"cards": Card.objects.all(),
+	}
+	return render(request, "card.html", my_dict)
