@@ -5,7 +5,6 @@ class Card(models.Model):
     card_number = models.CharField(max_length=12, null=True, blank=True)
     description = models.CharField(max_length=255, null=True, blank=True)
     card_type = models.CharField(max_length=12, null=True, blank=True)
-    card_power = models.CharField(max_length=12, null=True, blank=True)
     card_set_name = models.CharField(max_length=12, null=True, blank=True)
     image_url = models.CharField(max_length=255, null=True, blank=True)
     def __unicode__(self):
