@@ -111,12 +111,7 @@ $(document).ready(function(){
                                     <li>Deck name: <a href="/deck/{{ deck.name }}"><font color="white"> {{ deck.name }} </a></font><br>
                                     </li>
 
-                                    <li> {{ deck.description }} 
-                                    <br>
-                                         {% for deckcard in deck.deckcard_set.all %} 
-                                            <img src="/static/sets/{{ deckcard.card.card_set_name }}/Cards/{{ deckcard.card.image_url }}" width=360 height=529 align="right"> 
-                                        {% endfor %}
-                                     </li>
+
                                 </ul>   </th>
                             </tr>
                             
@@ -207,19 +202,6 @@ $(document).ready(function(){
     </script>
 
 <script>
-$( "li" )
-  .filter( ":odd" )
-    .hide()
-  .end()
-  .filter( ":even" )
-    .hover(function() {
-      $( this )
-        .toggleClass( "active" )
-        .next()
-          .stop( true, true )
-          .slideToggle();
-    });
-</script>
 
 </body>
 
