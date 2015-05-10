@@ -128,7 +128,22 @@ $(document).ready(function(){
                                 <ul>
 
 
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover Test"> {{ deckcard.card.name }} </button>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          {{ deckcard.card.name }} - {{ deckcard.quantity }}
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}">
+        Some placeholder text
+      </div>
+    </div>
+  </div>
 
                                     <li class="hover">{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
 
