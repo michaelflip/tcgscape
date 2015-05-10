@@ -109,7 +109,7 @@ $(document).ready(function(){
                             <tr>
                                 <th>                                <ul>
                                     <li>Deck name: <a href="/deck/{{ deck.name }}"><font color="white"> {{ deck.name }} </a></font><br></li>
-                                    <li> {{ deck.description }} </li>
+                                    <li> {{ deck.description }} <br> {% for deckcard in deck.deckcard_set.all %} <img src="/static/sets/{{ card.card_set_name }}/Cards/{{ card.image_url }}" width=360 height=529 align="right"> {% endfor %}</li>
                                 </ul>   </th>
                             </tr>
                             
