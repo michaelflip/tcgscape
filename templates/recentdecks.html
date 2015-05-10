@@ -74,7 +74,7 @@ $(document).ready(function(){
             {% for d in decks %}
 
             <li>
-                <a href="/deck/{{ d.name }}" onclick = $("#menu-close").click(); >{{ d.name }}</a>
+                <a href="/deck/{{ d.name }}" onclick = $("#menu-close").click(); > -{{ d.name }}</a>
             </li>
 
             {% endfor %}
