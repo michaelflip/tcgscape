@@ -109,7 +109,7 @@ $(document).ready(function(){
                         <table class="table table-condensed">
                             <tr>
 
-                                <th>Field A</th>
+                                <th>Name: {{ card.name }}</th>
                                 
                             </tr>
                             <tr>
@@ -118,17 +118,17 @@ $(document).ready(function(){
                                 <td><b>Description: {{ card.description }} </b> </td>
                             </tr>
                             <tr> 
-                                <td><b>Card Type:</b> </td>
+                                <td><b>Card Type:</b> {{ card.card_type }} </td>
                             </tr>
                             <tr>
-                                <td><b>Card Number: </b> </td>
+                                <td><b>Card Number: </b> {{ card.card_number }} </td>
                             </tr>
                             <tr>
                                 <td>
                                 </td>
                             </tr>
                         </table>
-
+<img src="/static/sets/{{ deckcard.card.card_set_name }}/Cards/{{ deckcard.card.image_url }}">
                     </div>
 
 
