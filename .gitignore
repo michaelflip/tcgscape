@@ -1,4 +1,3 @@
-staticfiles
 *.pyc
 *.sqlite3
 venv
