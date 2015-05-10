@@ -127,11 +127,11 @@ $(document).ready(function(){
                                     {% for deckcard in deck.deckcard_set.all %}
                                 <ul>
 
-                                    <li class="hover">{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
+                                    <li class="hover"><a href="#">{{ deckcard.card.name }} - {{ deckcard.quantity }}</a><br></li>
 
                                 </ul>   
 
-                                    <img src="/static/sets/{{ deckcard.card.card_set_name }}/cards/{{ deckcard.card.image_url }}">
+                                    
 
 
                                     {% endfor %}
