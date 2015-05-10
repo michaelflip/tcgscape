@@ -126,7 +126,7 @@ $(document).ready(function(){
 
                                     {% for deckcard in deck.deckcard_set.all %}
                                 <ul>
-                                    <li class="hover"><a href="/static/sets/{{ deckcard.card.card_set_name }}/Cards/{{ deckcard.card.image_url }}"><font color="white">{{ deckcard.card.name }} - {{ deckcard.quantity }}</font></a><br></li>
+                                    <li class="hover">{{ deckcard.card.name }} - {{ deckcard.quantity }}<br></li>
                                 </ul>   
 
                                     
@@ -223,7 +223,7 @@ $(document).ready(function(){
 <script>
 $( "li.hover" ).hover(
   function() {
-    $( this ).append( $( "More details" ) );
+    $( this ).append( $( "<span></span>" ) );
   }, function() {
     $( this ).find( "span:last" ).remove();
   }
