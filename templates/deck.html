@@ -224,9 +224,9 @@ $(document).ready(function(){
 $( "li.hover" ).hover(
   function() {
     $( this ).append( $( "<span> 
-        Card Type: {% for deckcard in deck.deckcard_set.get[0] %} {{ deckcard.card.card_type }} {% endfor %} 
-        Number: {% for deckcard in deck.deckcard_set.get[0] %} {{ deckcard.card.card_number }} {% endfor %} 
-        Description: {% for deckcard in deck.deckcard_set.get[0] %} {{ deckcard.card.description }} {% endfor %} 
+        Card Type: {% for deckcard in deck.deckcard_set.all()[:0] %} {{ deckcard.card.card_type }} {% endfor %} 
+        Number: {% for deckcard in deck.deckcard_set.all()[:1] %} {{ deckcard.card.card_number }} {% endfor %} 
+        Description: {% for deckcard in deck.deckcard_set.all()[:5] %} {{ deckcard.card.description }} {% endfor %} 
                             </span>" ) );
   }, function() {
     $( this ).find( "span:last" ).remove();
