@@ -125,7 +125,26 @@ $(document).ready(function(){
                                 <td>
 
 
+{% for deckcard in deck.deckcard_set.all %}
 
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          {{ deckcard.card.name }} - {{ deckcard.quantity }}
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <img src="/static/sets/{{ deckcard.card.card_set_name }}/cards/{{ deckcard.card.image_url }}">
+        
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
 
 
      
@@ -144,26 +163,7 @@ $(document).ready(function(){
                 </div>
 </aside>
 
-{% for deckcard in deck.deckcard_set.all %}
 
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          {{ deckcard.card.name }} - {{ deckcard.quantity }}
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        <img src="/static/sets/set1/cards/{{ deckcard.card.image_url }}">
-        
-      </div>
-    </div>
-  </div>
-
-{% endfor %}
 
     <!-- Footer -->
     <footer>
