@@ -33,7 +33,7 @@ def deck(request, deck_name):
 	}
 	return render(request, "deck.html", my_dict)
 
-def card(request, deck_name):
+def card(request, card_name):
 	my_dict = {
 		"card": Card.objects.get(name=card_name),
 		"cards": Card.objects.all(),
