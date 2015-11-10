@@ -106,14 +106,14 @@ $(document).ready(function(){
                             <tr>
 
                                 <th>Name: {{ card.name }}</th>
-                                
+
                             </tr>
                             <tr>
                             </tr>
                             <tr>
                                 <td><b>Description: <br> {{ card.description }} </b> </td>
                             </tr>
-                            <tr> 
+                            <tr>
                                 <td><b>Card Type:</b> {{ card.card_type }} </td>
                             </tr>
                             <tr>
@@ -125,7 +125,7 @@ $(document).ready(function(){
                             </tr>
 
                         </table>
-<img src="/static/sets/{{ card.card_set_name }}/Cards/{{ card.image_url }}" width=360 height=529>
+<img src="https://s3-us-west-2.amazonaws.com/dbztcgsets/{{ card.card_set_name }}/{{ card.image_url }}" width=360 height=529>
                     </div>
 
 
@@ -217,7 +217,7 @@ $( "li.hover" ).hover(
     $( this ).find( "span:last" ).remove();
   }
 );
- 
+
 $( "li.fade" ).hover(function() {
   $( this ).fadeOut( 100 );
   $( this ).fadeIn( 500 );
